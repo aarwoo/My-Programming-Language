@@ -6,12 +6,12 @@ But,We must get some concerpt before:<br>
 E[i] is a expression.<br>
 V[i] is a variable that consists of Aa-Zz or _ .<br>
 Now we start to declare a Template:<br>
-?(#V[1],#V[2],...,#V[n])=E[i];<br>
-It's a Template which will receive n Expressions.<br>
-V[i]'s value is the NO.i Expression received.<br>
-<b>BUT WHAT!!!</b><br>
-V[i] may not be calculated as soon as the NO.i Expression received unless ommit # before V[i] !!!<br>
-Sure,We will have insteresting of # before V[i] .<br>
-You could ask,what's this?Let me tell you!<br>
-# before V[i] means V[i]'s value will be calculate whenever its value is need.<br>
+?(#V[1]~,#V[2]~,...,#V[n]~){E[0]}<br>
+It's a Template that receives n group expressions.<br>
+V[i] refers he NO.i group expressions received.<br>
+Oka,I known you're insteresting in # and ~ .<br>
+# before V[i] exsists means V[i] should be caluclated whenever need to known its value,or ommit
+when we need calculate V[i] at once as soon as it could be calcuate.<br>
+~ before V[i] exsists means NO.i groups values have at least 0 expressions which spilits by ; ,or ommit
+when we require NO.i expressions must and only have one expression.<br>
 @2019 by master aarwoo
