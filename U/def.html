@@ -3,6 +3,7 @@
 <img height="40%" src="U Logo.svg"/><br>
 <h1>SOME DESIGNED NOT PRETTY WELL~</h1>
 <h3>UNFINSHED!!!</h3>
+<h3>Recent think:Can variable mutable with the lazy calc?</h3>
 <h2>Definition</h2>
 &nbsp;&nbsp;&nbsp;&nbsp;E and E' are an expression<br>
 &nbsp;&nbsp;&nbsp;&nbsp;V is an expression (a.k.a a variable) that consists of any chars
@@ -26,9 +27,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+n.neN is n.n*10<sup>N</sup> (a.k.a. a normal number)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-n.neN is -n.n*10<sup>N</sup> (a.k.a. a normal number)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;V(E) is an expression (aka a function) that receives an expression and returns E :<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V in V(E) is a local variable
-                                                that its initial value is the expression V(E) received<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V is a global variable in default<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V in V(E) is a local variable 
+                                                that ininital value is the expressions received by V(E) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V is the global variable in default
+                                                that ininital value is $nil<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(E E') is an expression that refers a expression returned by E after received E' <br>
 &nbsp;&nbsp;&nbsp;&nbsp;(E,E') is an expression that will calc E and E' one by one and return the value of E' <br>
 &nbsp;&nbsp;&nbsp;&nbsp;Observe a pair ( ) :<br>
@@ -89,9 +91,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $true) is x(y(x))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $false) is x(y(y))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$while receives two expression<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($while a b) is ($if a (b,($while a b)) $nil<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$for receives one variable and three expression<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($for i a b c) is ($while a (c,b))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($while a b) is ($if a (b,($while a b))) $nil<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$sin is the sin function that receives one expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($sin 0) is 0<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$cos is the cos function that receives one expression:<br>
