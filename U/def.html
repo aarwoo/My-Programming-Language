@@ -3,7 +3,6 @@
 <img height="40%" src="U Logo.svg"/><br>
 <h1>SOME DESIGNED NOT PRETTY WELL~</h1>
 <h3>UNFINSHED!!!</h3>
-<h3>Recent think:Can variable mutable with the lazy calc?</h3>
 <h2>Definition</h2>
 &nbsp;&nbsp;&nbsp;&nbsp;E and E' are an expression<br>
 &nbsp;&nbsp;&nbsp;&nbsp;V is an expression (a.k.a a variable) that consists of any chars
@@ -12,7 +11,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B consists of any chars
                                                 except ( or ) or [ or ] or { or } or , or . or " or $ or&nbsp; &nbsp;(a space)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;S is an expression (a.k.a a string) that consists of any chars in "" (except using "" refers " )<br>
-&nbsp;&nbsp;&nbsp;&nbsp;T is an expression (a.k.a a tuple) that consists of all expressions in {} (split expressions by , )<br>
+&nbsp;&nbsp;&nbsp;&nbsp;T is an expression (a.k.a a tuple) that consists of all expressions' values
+                        (expressions is calced from left to right one by one) in {} (split expressions by , )<br>
 &nbsp;&nbsp;&nbsp;&nbsp;N is an expression (a.k.a a normal number):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n and n' are natrual numbers (a.k.a. normal numbers)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+n is n (a.k.a. normal numbers)<br>
@@ -26,13 +26,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n.neN is n.n*10<sup>N</sup> (a.k.a. a normal number)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+n.neN is n.n*10<sup>N</sup> (a.k.a. a normal number)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-n.neN is -n.n*10<sup>N</sup> (a.k.a. a normal number)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;V(E) is an expression (aka a function) that receives an expression and returns E :<br>
+&nbsp;&nbsp;&nbsp;&nbsp;V(E) is an expression (aka a function) that receives an expression's value and returns E :<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V in V(E) is a local variable 
-                                                that ininital value is the expressions received by V(E) <br>
+                                                that ininital value is the expression's value received by V(E) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V is the global variable in default
                                                 that ininital value is $nil<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(E E') is an expression that refers a expression returned by E after received E' <br>
-&nbsp;&nbsp;&nbsp;&nbsp;(E,E') is an expression that will calc E and E' one by one and return the value of E' <br>
+&nbsp;&nbsp;&nbsp;&nbsp;(E E') is an expression that refers the value returned by E after received E'
+                        (It will calc E and E' one by one)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(E,E') is an expression that refers the value of E' (It will calc E and E' one by one)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Observe a pair ( ) :<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the last char before ( is ( or no exists then you can omit this pair ( ) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the first char after ) is ) or no exists then you can omit ) and use [ to replace ( <br>
@@ -87,9 +88,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;$import receives one string returns $nil but imports a file which path is the string:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($import "stdio.h") is $nil but imports a file which path is stdio.h<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($import "C:/user/stdlib.txt") is $nil but imports a file which path is C:/user/stdlib.txt<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$if receives one boolean value:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $true) is x(y(x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $false) is x(y(y))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$if receives one boolean value and two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $true x y) is x<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $false x y) is y<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$while receives two expression<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($while a b) is ($if a (b,($while a b))) $nil<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$sin is the sin function that receives one expression:<br>
