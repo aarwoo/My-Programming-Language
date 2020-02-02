@@ -8,6 +8,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;V is an expression (aka a variable) that consists of Aa-Zz and _ <br>
 &nbsp;&nbsp;&nbsp;&nbsp;S is an expression (aka a string) that consists of any chars in "" (except using "" refers ")<br>
 &nbsp;&nbsp;&nbsp;&nbsp;N is an expression (aka a number) that just like the long double literal in C<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$V is an expression (aka a bulit-in variable) that mainly used to bulit-in function's name.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;V(E) is an expression (aka a function) that received an expression named V , then return E <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V in V(E) and V not in V(E) is not the same variables<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V is a global variable in default<br>
@@ -16,4 +17,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the last char before ( is ( or no exists then you can omit this pair ( ) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the first char after ) is ) or no exists then you can omit ) and use [ to replace ( <br>
 <h2>Built-in Functions</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;str_bind received to string and bind them into a string,for example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(str_bind "a" "b") is "ab"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str_find 
 @2020 by <a href="https://github.com/aarwoo">master aarwoo</a>
