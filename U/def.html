@@ -34,6 +34,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the last char before ( is ( or no exists then you can omit this pair ( ) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the first char after ) is ) or no exists then you can omit ) and use [ to replace ( <br>
 <h2>Built-in Variables:</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;$nil is a empty value<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$true is true (a.k.a. a boolean value)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$false is false (a.k.a. a boolean value)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$nan is a special number means not a number<br>
@@ -78,15 +79,18 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($-- -2) is 2<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($-- $true) is $false<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($-- $false) is $true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$= receives one variable and one expression,modify this variable's value into the expression:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($= x 2) will modify x's value into 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$= receives one variable and one expression,returns $nil but modifies this variable's value into the expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($= x y) is $nil but it modifies x's value into y<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$import receives one string returns $nil but imports a file which path is the string:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($import "stdio.h") is $nil but imports a file which path is stdio.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($import "C:/user/stdlib.txt") is $nil but imports a file which path is C:/user/stdlib.txt<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$if receives one boolean value:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $true) is x(y(x))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $false) is x(y(y))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$while receives two expressions:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($while a b) is ($if a (b,($while a b)) $nil)
-&nbsp;&nbsp;&nbsp;&nbsp;$for receives one variable and three expressions:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($for i a b c) is ($while a (c,b))
+&nbsp;&nbsp;&nbsp;&nbsp;$while receives two expression<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($while a b) is ($if a (b,($while a b)) $nil<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$for receives one variable and three expression<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($for i a b c) is ($while a (c,b))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$sin is the sin function that receives one expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($sin 0) is 0<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$cos is the cos function that receives one expression:<br>
