@@ -16,8 +16,33 @@
 &nbsp;&nbsp;&nbsp;&nbsp;Observe a pair ( ) :<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the last char before ( is ( or no exists then you can omit this pair ( ) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the first char after ) is ) or no exists then you can omit ) and use [ to replace ( <br>
-<h2>Built-in Functions</h2>
-&nbsp;&nbsp;&nbsp;&nbsp;str_bind received to string and bind them into a string,for example:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(str_bind "a" "b") is "ab"<br>
-&nbsp;&nbsp;&nbsp;&nbsp;str_find 
+<h2>Built-in Variables:</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;$+ received two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($+ "ab" "cd") is "abcd"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($+ 2 3) is 5<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($+ f g) is x($+ (f x) (g x))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$- received two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($- 2 5) is -3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($- f g) is x($- (f x) (g x))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$* received two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($* 2 3) is 6<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($* f g) is x($* (f x) (g x))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$/ received two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($/ 2 5) is 0.4<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($/ f g) is x($/ (f x) (g x))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$^ received two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($^ 2 3) is 8<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($^ f g) is x($^ (f x) (g x))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$sin is the sin function that received one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($sin 0) is 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$cos is the cos function that received one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($cos 0) is 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$tan is the tan function that received one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($tan 0) is 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$asin is the arcsin function that received one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($asin 0) is 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$acos is the arccos function that received one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($acos 1) is 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$atan is the arctan function that received one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($atan 0) is 0<br>
 @2020 by <a href="https://github.com/aarwoo">master aarwoo</a>
