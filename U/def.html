@@ -11,7 +11,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B consists of any chars
                                                 except ( or ) or [ or ] or { or } or , or . or " or $ or&nbsp; &nbsp;(a space)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;S is an expression (a.k.a a string) that consists of any chars in "" (except using "" refers " )<br>
-&nbsp;&nbsp;&nbsp;&nbsp;T is an expression (a.k.a a tuple) that consissts of all expressions' value in {} (spilt expressions by , )<br>
+&nbsp;&nbsp;&nbsp;&nbsp;T is an expression (a.k.a a tuple) that consists of all expressions in {} (split expressions by , )<br>
 &nbsp;&nbsp;&nbsp;&nbsp;N is an expression (a.k.a a normal number):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n and n' are natrual numbers (a.k.a. normal numbers)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+n is n (a.k.a. normal numbers)<br>
@@ -29,26 +29,64 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V in V(E) and V not in V(E) is not the same variables<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V is a global variable in default<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(E E') is an expression that refers a expression returned by E after received E' <br>
+&nbsp;&nbsp;&nbsp;&nbsp;(E,E') is an expression that will calc E and E' one by one and return the value of E' <br>
 &nbsp;&nbsp;&nbsp;&nbsp;Observe a pair ( ) :<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the last char before ( is ( or no exists then you can omit this pair ( ) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the first char after ) is ) or no exists then you can omit ) and use [ to replace ( <br>
 <h2>Built-in Variables:</h2>
-&nbsp;&nbsp;&nbsp;&nbsp;$+ receives two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$true is true (a.k.a. a boolean value)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$false is false (a.k.a. a boolean value)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$nan is a special number means not a number<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$+inf is a special number means +inf<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$-inf is a special number means -inf<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$+ receives two values:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($+ "ab" "cd") is "abcd"<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($+ 2 3) is 5<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($+ f g) is x($+ (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$- receives two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$- receives two values:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($- 2 5) is -3<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($- f g) is x($- (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$* receives two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$* receives two values:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($* 2 3) is 6<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($* f g) is x($* (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$/ receives two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$/ receives two values:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($/ 2 5) is 0.4<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($/ f g) is x($/ (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$^ receives two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$^ receives two values:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($^ 2 3) is 8<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($^ f g) is x($^ (f x) (g x))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$< receives two values:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($< 2 3) is $true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($< "b" "a") is $false<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$<= receives two values:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($<= 2 3) is $true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($<= "b" "a") is $false<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$== receives two values:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($== 2 2) is $true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($== "b" "a") is $false<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$!= receives two values:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($!= 2 3) is $true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($!= "b" "b") is $false<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$> receives two values:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($> 3 2) is $true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($> "a" "b") is $false<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$>= receives two values:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($>= 3 2) is $true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($>= "a" "b") is $false<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$-- receives one value:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($-- 2) is -2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($-- -2) is 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($-- $true) is $false<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($-- $false) is $true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$= receives one variable and one expression,modify this variable's value into the expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($= x 2) will modify x's value into 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$if receives one boolean value:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $true) is x(y(x))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $false) is x(y(y))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$while receives two expressions:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($while a b) is ($if a (b,($while a b)) $nil)
+&nbsp;&nbsp;&nbsp;&nbsp;$for receives one variable and three expressions:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($for i a b c) is ($while a (c,b))
 &nbsp;&nbsp;&nbsp;&nbsp;$sin is the sin function that receives one expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($sin 0) is 0<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$cos is the cos function that receives one expression:<br>
@@ -73,7 +111,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($acosh 1) is 0<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$atanh is the arctanh function that receives one expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($atanh 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$nan is a special number means not a number<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$+inf is a special number means +inf<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$-inf is a special number means -inf<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$str_split received two strings and split the first one by the second one:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($str_split "23abflgabab!ab" "ab") is {"23","flg","","!",""}<br>
 @2020 by <a href="https://github.com/aarwoo">master aarwoo</a>
