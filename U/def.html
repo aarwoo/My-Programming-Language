@@ -6,7 +6,10 @@
 <h2>Definition</h2>
 &nbsp;&nbsp;&nbsp;&nbsp;E and E' are an expression<br>
 &nbsp;&nbsp;&nbsp;&nbsp;V is an expression (a.k.a a variable) that consists of any chars
-                        except ( or ) or [ or ] or { or } or , or . or " or $ or&nbsp; &nbsp;(a space) and never begin with + or - or 0-9<br>
+                        except ( or ) or [ or ] or { or } or , or . or " or $ or&nbsp; &nbsp;(a space) and never begins with + or - or 0-9:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$B is an expression (a.k.a a built-in variable):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B consists of any chars
+                                                except ( or ) or [ or ] or { or } or , or . or " or $ or&nbsp; &nbsp;(a space)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;S is an expression (a.k.a a string) that consists of any chars in "" (except using "" refers " )<br>
 &nbsp;&nbsp;&nbsp;&nbsp;T is an expression (a.k.a a tuple) that consissts of all expressions' value in {} (spilt expressions by , )<br>
 &nbsp;&nbsp;&nbsp;&nbsp;N is an expression (a.k.a a normal number):<br>
@@ -22,7 +25,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n.neN is n.n*10<sup>N</sup> (a.k.a. a normal number)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+n.neN is n.n*10<sup>N</sup> (a.k.a. a normal number)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-n.neN is -n.n*10<sup>N</sup> (a.k.a. a normal number)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$V is an expression (aka a built-in variable) that mainly used to built-in function's name.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;V(E) is an expression (aka a function) that received an expression named V , then return E <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V in V(E) and V not in V(E) is not the same variables<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V is a global variable in default<br>
