@@ -7,7 +7,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;E and E' are an expression<br>
 &nbsp;&nbsp;&nbsp;&nbsp;V is an expression (aka a variable) that consists of Aa-Zz and _ <br>
 &nbsp;&nbsp;&nbsp;&nbsp;S is an expression (aka a string) that consists of any chars in "" (except using "" refers ")<br>
-&nbsp;&nbsp;&nbsp;&nbsp;N is an expression (aka a number) that just like the long double literal in C<br>
+&nbsp;&nbsp;&nbsp;&nbsp;N is an expression (aka a normal number) that consists of 0-9 , . , - , + , e , E :<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2 means the number 1.2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+8.7 means the number +8.7<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-5.6 means the number -5.6<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3e4 means 1.3*10<sup>4</sup><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.8e+7 means 2.8*10<sup>7</sup><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.6e-22 means 5.6*10<sup>-22</sup><br>
 &nbsp;&nbsp;&nbsp;&nbsp;$V is an expression (aka a built-in variable) that mainly used to built-in function's name.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;V(E) is an expression (aka a function) that received an expression named V , then return E <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V in V(E) and V not in V(E) is not the same variables<br>
@@ -17,32 +23,47 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the last char before ( is ( or no exists then you can omit this pair ( ) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the first char after ) is ) or no exists then you can omit ) and use [ to replace ( <br>
 <h2>Built-in Variables:</h2>
-&nbsp;&nbsp;&nbsp;&nbsp;$+ received two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$+ receives two expressions:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($+ "ab" "cd") is "abcd"<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($+ 2 3) is 5<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($+ f g) is x($+ (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$- received two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$- receives two expressions:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($- 2 5) is -3<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($- f g) is x($- (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$* received two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$* receives two expressions:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($* 2 3) is 6<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($* f g) is x($* (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$/ received two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$/ receives two expressions:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($/ 2 5) is 0.4<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($/ f g) is x($/ (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$^ received two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$^ receives two expressions:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($^ 2 3) is 8<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($^ f g) is x($^ (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$sin is the sin function that received one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$sin is the sin function that receives one expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($sin 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$cos is the cos function that received one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$cos is the cos function that receives one expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($cos 0) is 1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$tan is the tan function that received one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$tan is the tan function that receives one expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($tan 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$asin is the arcsin function that received one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$asin is the arcsin function that receives one expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($asin 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$acos is the arccos function that received one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$acos is the arccos function that receives one expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($acos 1) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$atan is the arctan function that received one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$atan is the arctan function that receives one expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($atan 0) is 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$sinh is the sinh function that receives one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($sinh 0) is 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$cosh is the cosh function that receives one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($cosh 0) is 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$tanh is the tanh function that receives one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($tanh 0) is 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$asinh is the arcsinh function that receives one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($asinh 0) is 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$acosh is the arccosh function that receives one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($acosh 1) is 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$atanh is the arctanh function that receives one expression:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($atanh 0) is 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$nan is a special number means not a number<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$+inf is a special number means +inf<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$-inf is a special number means -inf<br>
 @2020 by <a href="https://github.com/aarwoo">master aarwoo</a>
