@@ -1,6 +1,6 @@
 <meta name="viewport" content="width=device-width height=devive-height initial-scale=1.0
                                minimum-scale=1.0 maximum-scale=1.0 user-scalable=no"/>
-<body style="font-size:20px;background:green;color:yellow">
+<body style="font-size:16px;background:green;color:yellow">
 <img height="40%" src="U Logo.svg"/><br>
 <h1>SOME DESIGNED NOT PRETTY WELL~</h1>
 <h3>UNFINSHED!!!</h3>
@@ -79,6 +79,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;$>= receives two values:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($>= 3 2) is $true<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($>= "a" "b") is $false<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$&& receives two boolean values:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($&& $true a) is a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($&& $false a) is $false<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$|| receives two boolean values:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($|| $true a) is $true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($|| $false a) is a<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$-- receives one value:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($-- 2) is -2<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($-- -2) is 2<br>
@@ -92,8 +98,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;$if receives one boolean value and two expressions:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $true x y) is x<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $false x y) is y<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$while receives two expression<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($while a b) is ($if a (b,($while a b))) $nil<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$while receives two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($while a b) is ($if a (b,($while a b)) $nil)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$do-while receives two expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($do-while a b) is (a,($while b a))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$for receives four expressions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($for a b c d) is (a,($while b (d,c)))<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$sin is the sin function that receives one expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($sin 0) is 0<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$cos is the cos function that receives one expression:<br>
