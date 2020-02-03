@@ -28,10 +28,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+n.neN is n.n*10<sup>N</sup> (a.k.a. a normal number)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-n.neN is -n.n*10<sup>N</sup> (a.k.a. a normal number)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;V(E) is an expression (aka a function) that receives an expression's value and returns E :<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V in V(E) is a variable 
-                                                that ininital value is the expression's value received by V(E) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V is a global variable in default that ininital value is $nil<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$V(E) is an expression that refers (V(E) $nil)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The initial value of V in V(E) is the value V(E) received<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any variable in V(E) is belongs its space<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The default value of any variable in any expression is $nil<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any variable in any expression is belongs the global space in default<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(E E') is an expression that refers the value returned by E after received E'
                         (It will calc E and E' one by one)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(E,E') is an expression that refers the value of E' (It will calc E and E' one by one)<br>
