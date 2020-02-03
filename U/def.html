@@ -96,8 +96,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($import "stdio.h") is $nil but imports a file which path is stdio.h<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($import "C:/user/stdlib.txt") is $nil but imports a file which path is C:/user/stdlib.txt<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$if receives one boolean value and two expressions:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $true x y) is x<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $false x y) is y<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $true x y) is x's value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $false x y) is y's value<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$while receives two expressions:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($while a b) is ($if a (b,($while a b)) $nil)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$do-while receives two expressions:<br>
