@@ -16,32 +16,29 @@ function detail(it_id,detail_id){
 <h3>UNFINSHED!!!</h3>
 <h2><button id="def_it" onclick="detail('def_it','def_details')">+</button>Definition</h2>
 <div id="def_details" style="display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;E and E' are an expression<br>
-&nbsp;&nbsp;&nbsp;&nbsp;V is an expression (a.k.a a variable) that consists of any chars
-                        except ( or ) or [ or ] or , or . or " or $ or&nbsp; &nbsp;(a space) and never begins with + or - or 0-9<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$B is an expression (a.k.a a built-in variable):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B consists of any chars
-                                                except ( or ) or [ or ] or , or . or " or $ or&nbsp; &nbsp;(a space)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;S is an expression (a.k.a a string) that consists of any chars in "" (except using "" refers " )<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$(T) is an expression (a.k.a a tuple):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T consists of expressions splited by&nbsp; &nbsp;(a space)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;N is an expression (a.k.a a real number):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z and z' are real numbers (a.k.a intergers<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n is a real number (a.k.a a natural number<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z.n is a real numbe<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zez' is z*10<sup>z'</sup> in mat<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z.nez' is z.n*10<sup>z'</sup> in math<br>
-&nbsp;&nbsp;&nbsp;&nbsp;V(E) is an expression (aka a function) that receives an expression's value and returns E :<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The initial value of V in V(E) is the value V(E) received<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any variable in V(E) is belongs V(E)'s space<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The default value of any variable in any expression is $nil<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any variable in any expression is belongs the global space in default<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(E E') is an expression that refers the value returned by E after received E'
-                        (It will calc E and E' one by one)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(E,E') is an expression that refers the value of E' (It will calc E and E' one by one)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Observe a pair ( ) :<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the last char before ( is ( or no exists then you can omit this pair ( ) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the first char after ) is ) or no exists then you can omit ) and use [ to replace ( <br>
+E and E' are an expression<br>
+V is an expression (a.k.a a variable) that consists of any chars except ( or ) or [ or ] or , or . or " or $ or&nbsp; &nbsp;(a space) and never begins with + or - or 0-9<br>
+$B is an expression (a.k.a a built-in variable):<br>
+B consists of any chars except ( or ) or [ or ] or , or . or " or $ or&nbsp; &nbsp;(a space)<br>
+S is an expression (a.k.a a string) that consists of any chars in "" (except using "" refers " )<br>
+$(T) is an expression (a.k.a a tuple):<br>
+T consists of expressions splited by&nbsp; &nbsp;(a space)<br>
+N is an expression (a.k.a a real number):<br>
+z and z' are real numbers (a.k.a intergers<br>
+n is a real number (a.k.a a natural number<br>
+z.n is a real numbe<br>
+zez' is z*10<sup>z'</sup> in mat<br>
+z.nez' is z.n*10<sup>z'</sup> in math<br>
+V(E) is an expression (aka a function) that receives an expression's value and returns E :<br>
+The initial value of V in V(E) is the value V(E) received<br>
+Any variable in V(E) is belongs V(E)'s space<br>
+The default value of any variable in any expression is $nil<br>
+Any variable in any expression is belongs the global space in default<br>
+(E E') is an expression that refers the value returned by E after received E' (It will calc E and E' one by one)<br>
+(E,E') is an expression that refers the value of E' (It will calc E and E' one by one)<br>
+Observe a pair ( ) :<br>
+If the last char before ( is ( or no exists then you can omit this pair ( ) <br>
+If the first char after ) is ) or no exists then you can omit ) and use [ to replace ( <br>
 </div>
 <h2>Built-in Variables:</h2>
 &nbsp;&nbsp;&nbsp;&nbsp;$nil is a empty value<br>
