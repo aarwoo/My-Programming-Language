@@ -1,10 +1,21 @@
 <meta name="viewport" content="width=device-width height=devive-height initial-scale=1.0
                                minimum-scale=1.0 maximum-scale=1.0 user-scalable=no"/>
-<body style="background:green;color:yellow">
+<script>
+function detail(it_id,detail_id){
+  if(document.getElementById(it_id).innerHTML=="+"){
+    document.getElementById(detail_id).style.display="inline";
+    document.getElementById(it_id).innerHTML="-";
+  }else{
+    document.getElementById(detail_id).style.display="none";
+    document.getElementById(it_id).innerHTML="+";
+  }
+}
+</script>
 <img height="40%" src="U Logo.svg"/><br>
 <h1>SOME DESIGNED NOT PRETTY WELL~</h1>
 <h3>UNFINSHED!!!</h3>
-<h2>Definition</h2>
+<button id="def_it" onclick="detail('def_it','def_details')">+</button> <h2>Definition</h2>
+<div id="def_details" style="display:none">
 &nbsp;&nbsp;&nbsp;&nbsp;E and E' are an expression<br>
 &nbsp;&nbsp;&nbsp;&nbsp;V is an expression (a.k.a a variable) that consists of any chars
                         except ( or ) or [ or ] or , or . or " or $ or&nbsp; &nbsp;(a space) and never begins with + or - or 0-9<br>
@@ -31,6 +42,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;Observe a pair ( ) :<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the last char before ( is ( or no exists then you can omit this pair ( ) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the first char after ) is ) or no exists then you can omit ) and use [ to replace ( <br>
+</div>
 <h2>Built-in Variables:</h2>
 &nbsp;&nbsp;&nbsp;&nbsp;$nil is a empty value<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$true is true (a.k.a. a boolean value)<br>
@@ -124,4 +136,3 @@
 &nbsp;&nbsp;&nbsp;&nbsp;$str_split received two strings and split the first one by the second one:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($str_split "23abflgabab!ab" "ab") is $("23" "flg" "" "!" "")<br>
 @2020 by <a href="https://github.com/aarwoo">master aarwoo</a>
-</body>
