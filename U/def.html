@@ -43,7 +43,7 @@ function f(it_id){
 </div>
 <h2><button id="Built-in Variables" onclick="f(this.id)">+</button> Built-in Variables</h2>
 <div id="_Built-in Variables" style="display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;<h3><button id="Constants" onclick="f(this.id)">+</button> Constants</h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="Constants" onclick="f(this.id)">+</button> Constants</h3>
 <div id="_Constants" style="display:none">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$nil is a empty value<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$true is true (a.k.a. a boolean value)<br>
@@ -52,7 +52,7 @@ function f(it_id){
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$+inf is a special number means +inf<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$-inf is a special number means -inf<br>
 </div>
-&nbsp;&nbsp;&nbsp;&nbsp;<h3><button id="Operators" onclick="f(this.id)">+</button> Operators</h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="Operators" onclick="f(this.id)">+</button> Operators</h3>
 <div id="_Operators" style="display:none">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$+ receives two values:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($+ "ab" "cd") is "abcd"<br>
@@ -102,7 +102,7 @@ function f(it_id){
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$= receives one variable and one expression,returns $nil but modifies this variable's value into the expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($= x y) is $nil but it modifies x's value into y<br>
 </div>
-&nbsp;&nbsp;&nbsp;&nbsp;<h3><button id="Statements" onclick="f(this.id)">+</button> Statements</h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="Statements" onclick="f(this.id)">+</button> Statements</h3>
 <div id="_Statements" style="display:none">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$if receives one boolean value and two expressions:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $true x y) is x's value<br>
@@ -114,7 +114,7 @@ function f(it_id){
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$for receives four expressions:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($for a b c d) is (a,($while b (d,c)))<br>
 </div>
-&nbsp;&nbsp;&nbsp;&nbsp;<h3><button id="Math Functions" onclick="f(this.id)">+</button> Math Functions</h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="Math Functions" onclick="f(this.id)">+</button> Math Functions</h3>
 <div id="_Math Functions" style="display:none">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$abs is the abs function that receives one expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($abs 0) is 0<br>
@@ -147,12 +147,12 @@ function f(it_id){
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$atanh is the arctanh function that receives one expression:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($atanh 0) is 0<br>
 </div>
-&nbsp;&nbsp;&nbsp;&nbsp;<h3><button id="String Functions" onclick="f(this.id)">+</button> String Functions</h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="String Functions" onclick="f(this.id)">+</button> String Functions</h3>
 <div id="_String Functions" style="display:none">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$str_split received two strings and split the first one by the second one:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($str_split "23abflgabab!ab" "ab") is $("23" "flg" "" "!" "")<br>
 </div>
-&nbsp;&nbsp;&nbsp;&nbsp;<h3><button id="File Functions" onclick="f(this.id)">+</button> File Functions</h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="File Functions" onclick="f(this.id)">+</button> File Functions</h3>
 <div id="_File Functions" style="display:none">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$import receives one string returns $nil but imports a file which path is the string:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($import "stdio.h") is $nil but imports a file which path is stdio.h<br>
