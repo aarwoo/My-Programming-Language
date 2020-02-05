@@ -18,12 +18,13 @@ function f(it_id){
 <h2><button id="Definition" onclick="f(this.id)">+</button> Definition</h2>
 <div id="_Definition" style="display:none">
 &nbsp;&nbsp;&nbsp;&nbsp;E and E' are an expression<br>
-&nbsp;&nbsp;&nbsp;&nbsp;V is an expression (a.k.a a variable) that consists of any chars except ( or ) or [ or ] or , or . or " or $ or&nbsp; &nbsp;(a space) and never begins with + or - or 0-9<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ES consists of at least one expressions splited by&nbsp; &nbsp;(a space) that will be calced form right to left one by one<br>
+&nbsp;&nbsp;&nbsp;&nbsp;V is an expression (a.k.a a variable) that consists of any chars except ( or ) or [ or ] or # or . or " or $ or&nbsp; &nbsp;(a space) and never begins with + or - or 0-9<br>
 &nbsp;&nbsp;&nbsp;&nbsp;$B is an expression (a.k.a a built-in variable):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B consists of any chars except ( or ) or [ or ] or , or . or " or $ or&nbsp; &nbsp;(a space)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B consists of any chars except ( or ) or [ or ] or # or . or " or $ or&nbsp; &nbsp;(a space)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;S is an expression (a.k.a a string) that consists of any chars in "" (except using "" refers " )<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$(T) is an expression (a.k.a a tuple):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T consists of expressions splited by&nbsp; &nbsp;(a space)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$(ES) and $() are an expression (a.k.a a tuple):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$() is an empty tuple<br>
 &nbsp;&nbsp;&nbsp;&nbsp;N is an expression (a.k.a a real number):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z and z' are real numbers (a.k.a intergers<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n is a real number (a.k.a a natural number<br>
@@ -36,7 +37,7 @@ function f(it_id){
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The default value of any variable in any expression is $nil<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any variable in any expression is belongs the global space in default<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(E E') is an expression that refers the value returned by E after received E' (It will calc E and E' one by one)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(E,E') is an expression that refers the value of E' (It will calc E and E' one by one)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#(ES) is an expression that refers the value of the rightest expression in ES<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Observe a pair ( ) :<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the last char before ( is ( or no exists then you can omit this pair ( ) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the first char after ) is ) or no exists then you can omit ) and use [ to replace ( <br>
