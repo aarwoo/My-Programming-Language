@@ -148,12 +148,33 @@ function f(it_id){
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$atanh is the arctanh function that receives one real number:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($atanh 0) is 0<br>
 </div>
-<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="String Functions" onclick="f(this.id)">+</button> String Functions</h3>
-<div id="_String Functions" style="display:none">
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="String" onclick="f(this.id)">+</button> String</h3>
+<div id="_String" style="display:none">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$str_split received two strings and split the first one by the second one:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($str_split "23abflgabab!ab" "ab") is $("23" "flg" "" "!" "")<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$eval received one strings and clacs it,returns the result:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($eval "1.3") is 1.3
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($eval "1.3") is 1.3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$tostr received one strings or one real number or one error value and returns a string:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($tostr "ab") is "ab"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($tostr 1.2) is "1.2"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($tostr ($error "Not Found")) is "Not Found"<br>
+</div>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="Tuple" onclick="f(this.id)">+</button> Tuple</h3>
+<div id="_Tuple" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$index receives one tuple and one real number,return the element's value that its index is the minimum but not less than the real number received:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($index $(2 "ab") 0) is 2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($index $(2 "ab") 1) is "ab"<br>
+</div>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="ERROR" onclick="f(this.id)">+</button> ERROR</h3>
+<div id="_ERROR" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$error received an string and returns an error value:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($error "Not Found") is an error value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bulit-in Functions returns error values when it can't returns the normal value after it received enough values or expressions it wanted<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$catch received one error value and one string,checks if the error value could made by passing the string received to $error:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($catch ($error a) a) is $true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($catch ($error a) b) is $false<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$crash received an error value and prints it to the error log and close the application any way:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($crash ($error t)) prints t to the error log and close the application any way<br>
 </div>
 <h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="IO" onclick="f(this.id)">+</button> IO</h3>
 <div id="_IO" style="display:none">
