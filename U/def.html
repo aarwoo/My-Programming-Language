@@ -13,190 +13,29 @@ function f(it_id){
 }
 </script>
 <img height="40%" src="U Logo.svg"/><br>
+<h1>Unfinished!!!</h1>
 <h1>Some design is not perfer</h1>
 <h1>Some English grammar or spell error may contained</h1>
 <h1><a href="https://github.com/aarwoo/My-Programming-Language/issues">Issues is welcome!</a><h1>
 <h2><button id="Definition" onclick="f(this.id)">+</button> Definition</h2>
 <div id="_Definition" style="display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;E and E' are an expression<br>
-&nbsp;&nbsp;&nbsp;&nbsp;ES consists of at least one expressions splited by&nbsp; &nbsp;(a space) that will be calced form right to left one by one<br>
-&nbsp;&nbsp;&nbsp;&nbsp;V is an expression (a.k.a a variable) that consists of any chars except ( or ) or [ or ] or # or . or " or $ or&nbsp; &nbsp;(a space) and never begins with + or - or 0-9<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$B is an expression (a.k.a a built-in variable):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B consists of any chars except ( or ) or [ or ] or # or . or " or $ or&nbsp; &nbsp;(a space)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;S is an expression (a.k.a a string) that consists of any chars in "" (except using "" refers " )<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$(ES) and $() are an expression (a.k.a a tuple):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$() is an empty tuple<br>
-&nbsp;&nbsp;&nbsp;&nbsp;N is an expression (a.k.a a real number):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z and z' are real numbers (a.k.a intergers<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n is a real number (a.k.a a natural number<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z.n is a real numbe<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zez' is z*10<sup>z'</sup> in mat<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z.nez' is z.n*10<sup>z'</sup> in math<br>
-&nbsp;&nbsp;&nbsp;&nbsp;V(E) is an expression (aka a function) that receives an expression's value and returns E :<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The initial value of V in V(E) is the value V(E) received<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any variable in V(E) is belongs V(E)'s space<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The default value of any variable in any expression is $nil<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any variable in any expression is belongs the global space in default<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(E E') is an expression that refers the value returned by E after received E' (It will calc E and E' one by one)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;#(ES) is an expression that refers the value of the rightest expression in ES<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Observe a pair ( ) :<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the last char before ( is ( or no exists then you can omit this pair ( ) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the first char after ) is ) or no exists then you can omit ) and use [ to replace ( <br>
-</div>
-<h2><button id="Built-in Variables" onclick="f(this.id)">+</button> Built-in Variables</h2>
-<div id="_Built-in Variables" style="display:none">
-<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="Constants" onclick="f(this.id)">+</button> Constants</h3>
-<div id="_Constants" style="display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$nil is a empty value<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$true is true (a.k.a. a boolean value)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$false is false (a.k.a. a boolean value)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$nan is a special number means not a number<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$+inf is a special number means +inf<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$-inf is a special number means -inf<br>
-</div>
-<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="Operators" onclick="f(this.id)">+</button> Operators</h3>
-<div id="_Operators" style="display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$+ receives two values:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($+ "ab" "cd") is "abcd"<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($+ 2 3) is 5<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($+ f g) is x($+ (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$- receives two values:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($- 2 5) is -3<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($- f g) is x($- (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$* receives two values:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($* 2 3) is 6<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($* f g) is x($* (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$/ receives two values:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($/ 2 5) is 0.4<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($/ f g) is x($/ (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$^ receives two values:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($^ 2 3) is 8<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($^ f g) is x($^ (f x) (g x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$< receives two values:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($< 2 3) is $true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($< "b" "a") is $false<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$<= receives two values:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($<= 2 3) is $true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($<= "b" "a") is $false<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$== receives two values:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($== 2 2) is $true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($== "b" "a") is $false<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$!= receives two values:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($!= 2 3) is $true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($!= "b" "b") is $false<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$> receives two values:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($> 3 2) is $true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($> "a" "b") is $false<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$>= receives two values:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($>= 3 2) is $true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($>= "a" "b") is $false<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&& receives two boolean values:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($&& $true a) is a<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($&& $false a) is $false<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$|| receives two boolean values:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($|| $true a) is $true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($|| $false a) is a<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$-- receives one value:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($-- 2) is -2<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($-- -2) is 2<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($-- $true) is $false<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($-- $false) is $true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$= receives one variable and one expression,returns $nil but modifies this variable's value into the expression:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($= x y) is $nil but it modifies x's value into y<br>
-</div>
-<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="Statements" onclick="f(this.id)">+</button> Statements</h3>
-<div id="_Statements" style="display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$if receives one boolean value and two expressions:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $true x y) is x's value<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($if $false x y) is y's value<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$while receives two expressions:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($while a b) is ($if a #(b ($while a b)) $nil)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$do-while receives two expressions:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($do-while a b) is #(a ($while b a))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$for receives four expressions:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($for a b c d) is #(a ($while b #(d c)))<br>
-</div>
-<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="Math Functions" onclick="f(this.id)">+</button> Math Functions</h3>
-<div id="_Math Functions" style="display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$abs is the abs function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($abs 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$sgn is the sgn function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($sgn 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$sqrt is the sqrt function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($sqrt 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$sin is the sin function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($sin 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$cos is the cos function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($cos 0) is 1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$tan is the tan function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($tan 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$asin is the arcsin function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($asin 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$acos is the arccos function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($acos 1) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$atan is the arctan function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($atan 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$sinh is the sinh function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($sinh 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$cosh is the cosh function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($cosh 0) is 1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$tanh is the tanh function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($tanh 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$asinh is the arcsinh function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($asinh 0) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$acosh is the arccosh function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($acosh 1) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$atanh is the arctanh function that receives one real number:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($atanh 0) is 0<br>
-</div>
-<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="String" onclick="f(this.id)">+</button> String</h3>
-<div id="_String" style="display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$str_split received two strings and split the first one by the second one:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($str_split "23abflgabab!ab" "ab") is $("23" "flg" "" "!" "")<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$eval received one strings and clacs it,returns the result:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($eval "1.3") is 1.3<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$tostr received one strings or one real number or one error value and returns a string:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($tostr "ab") is "ab"<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($tostr 1.2) is "1.2"<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($tostr ($error "Not Found")) is "Not Found"<br>
-</div>
-<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="Tuple" onclick="f(this.id)">+</button> Tuple</h3>
-<div id="_Tuple" style="display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$index receives one tuple and one real number,return the element's value that its index is the minimum but not less than the real number received:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($index $(2 "ab") 0) is 2<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($index $(2 "ab") 1) is "ab"<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$begin_index receives one tuple and returns 0 (a.k.a the begin index of the tuple received):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($begin_index $()) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($begin_index $(2 "ab")) is 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$end_index receives one tuple and returns the end index of the tuple received:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($end_index $()) is -1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($end_index $(2 "ab")) is 1<br>
-</div>
-<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="ERROR" onclick="f(this.id)">+</button> ERROR</h3>
-<div id="_ERROR" style="display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$error received an string and returns an error value:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($error "Not Found") is an error value<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bulit-in Functions returns error values when it can't returns the normal value after it received enough values or expressions it wanted<br> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$catch received one error value and one string,checks if the error value could made by passing the string received to $error:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($catch ($error a) a) is $true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($catch ($error a) b) is $false<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$crash received an error value and prints it to the error log and close the application any way:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($crash ($error t)) prints t to the error log and close the application any way<br>
-</div>
-<h3>&nbsp;&nbsp;&nbsp;&nbsp;<button id="IO" onclick="f(this.id)">+</button> IO</h3>
-<div id="_IO" style="display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$import receives one string returns $nil but imports a file which path is the string:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($import "stdio.h") is $nil but imports a file which path is stdio.h<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($import "C:/user/stdlib.txt") is $nil but imports a file which path is C:/user/stdlib.txt<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$read-file receives one string returns a string contained all text in the file which path is the string received:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($read-file "readme.md") is a string contained all text in the file which path is readme.md<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($read-file "C:/user/record.txt") is a string contained all text in the file which path is C:/user/record.txt<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$write-file receives two string returns $nil but writes the second string received to the file which path is the first string received:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($write-file "index.html" s) is $nil but writes s to the file which path is index.html<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($write-file "C:/user/config.ini" s) is $nil but writes s to the file which path is C:/user/config.ini<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$gets is a string contained one line text read from keyboard<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$puts receives one string returns $nil but prints the string received to the screen:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;($puts s) is $nil but prints s to the screen<br>
-</div>
+&nbsp;&nbsp;E is a expression<br>
+&nbsp;&nbsp;ES consists of at least zero expressions splited by at least one Space or Line Feed<br>
+&nbsp;&nbsp;V and V_ are expressions that consist of any char expected # or $ or " or ' or ( or ) or Space or Line Feed<br>
+&nbsp;&nbsp;$V is a expression that is constant<br>
+&nbsp;&nbsp;#V is a expression that is V (NOTICE: Not V's value)<br>
+&nbsp;&nbsp;V(ES) is a expression that receives one value as V's value and returns (ES)'s value:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;V belongs the global space in default<br>
+&nbsp;&nbsp;&nbsp;&nbsp;V and V_ in V(ES) belong the local space<br>
+&nbsp;&nbsp;(ES) is a expression that is calculated in the following way:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;()'s value is $nil<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(E)'s value  is E's value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(ES E)'s value is the value returned after passing E's value to (ES)'s value ((ES) will be calculated ahead of E)<br>
+&nbsp;&nbsp;$(ES) is a expression that calculated in the following way:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$()'s value is $nil<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$(E)'s value is E's value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$(ES E)'s value is E's value calculated after $(ES) calculated<br>
+&nbsp;&nbsp;#(ES) is a expression that calculated in the following way:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#(ES)'s value is (ES) (NOTICE: Not (ES)'s value)<br>
 </div>
 @2020 by <a href="https://github.com/aarwoo">master aarwoo</a>
