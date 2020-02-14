@@ -19,23 +19,27 @@ function f(it_id){
 <h1><a href="https://github.com/aarwoo/My-Programming-Language/issues">Issues is welcome!</a><h1>
 <h2><button id="Definition" onclick="f(this.id)">+</button> Definition</h2>
 <div id="_Definition" style="display:none">
-&nbsp;&nbsp;E is a expression<br>
-&nbsp;&nbsp;ES consists of at least zero expressions splited by at least one Space or Line Feed<br>
-&nbsp;&nbsp;V and V_ are expressions that consist of any char expected # or $ or " or ' or ( or ) or Space or Line Feed<br>
-&nbsp;&nbsp;$V is a expression that is constant<br>
-&nbsp;&nbsp;#V is a expression that is V (NOTICE: Not V's value)<br>
-&nbsp;&nbsp;V(ES) is a expression that receives one value as V's value and returns (ES)'s value:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;V belongs the global space in default<br>
-&nbsp;&nbsp;&nbsp;&nbsp;V and V_ in V(ES) belong the local space<br>
-&nbsp;&nbsp;(ES) is a expression that is calculated in the following way:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;()'s value is $nil<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(E)'s value  is E's value<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(ES E)'s value is the value returned after passing E's value to (ES)'s value ((ES) will be calculated ahead of E)<br>
-&nbsp;&nbsp;$(ES) is a expression that calculated in the following way:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$()'s value is $nil<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$(E)'s value is E's value<br>
-&nbsp;&nbsp;&nbsp;&nbsp;$(ES E)'s value is E's value calculated after $(ES) calculated<br>
-&nbsp;&nbsp;#(ES) is a expression that calculated in the following way:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;#(ES)'s value is (ES) (NOTICE: Not (ES)'s value)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;E is a expression<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ES consists of at least zero expressions splited by at least one Space or Line Feed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;V and V_ are expressions that consist of any char expected # or $ or " or ' or ( or ) or Space or Line Feed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$V is a expression that is constant<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#V is a expression that is V (NOTICE: Not V's value)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;V(ES) is a expression that receives one value as V's value and returns (ES)'s value:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V belongs the global space in default<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V and V_ in V(ES) belong the local space<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(ES) is a expression that is calculated in the following way:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;()'s value is $nil<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(E)'s value  is E's value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ES E)'s value is the value returned after passing E's value to (ES)'s value ((ES) will be calculated ahead of E)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$(ES) is a expression that is a tuple:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(ES)'s value consists the value of each expression in ES (Exressions in ES will calculated from left to right one by one)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#(ES) is a expression that calculated in the following way:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#(ES)'s value is (ES) (NOTICE: Not (ES)'s value)<br>
+</div>
+<h2><button id="Constant" onclick="f(this.id)">+</button> Constant</h2>
+There is nothing because it's unfinished!
+<div id="_Constant" style="display:none">
+
 </div>
 @2020 by <a href="https://github.com/aarwoo">master aarwoo</a>
